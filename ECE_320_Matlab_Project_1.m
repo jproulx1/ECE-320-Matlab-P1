@@ -91,7 +91,15 @@ d7=[1 -1 1 -1 -1 1 -1]
 negd7=fliplr(d7)
 yd7=conv(d7,negd7)
 stem(yd7)
+xlabel('Time')
 
+
+%3.3 e
+josh=13
+testr=[zeros(1,josh) b13]
+negtestr=fliplr(testr)
+y33=conv(testr,negtestr)
+stem(y33)
 
 
 
