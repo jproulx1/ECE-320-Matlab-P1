@@ -66,7 +66,7 @@ y3=conv(b3,negnb3);
 stem(y3)
 xlabel('Time')
 ylabel('')
-%title('h_{MF}[n]')
+title('h_{MF}[n]')
 
 %Output for Causal Mathched Filter (7)
 figure(8)
@@ -99,7 +99,13 @@ josh=13
 testr=[zeros(1,josh) b13]
 negtestr=fliplr(testr)
 y33=conv(testr,negtestr)
-stem(y33)
+%stem(y33)
 
+stem(noisyr4)
+title('noisyr4')
+
+nois=conv(noisyr4,negnb13)
+stem(nois)
+title('nois')
 
 
