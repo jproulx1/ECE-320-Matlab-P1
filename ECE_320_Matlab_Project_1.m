@@ -5,7 +5,7 @@ b3=[1 1 -1];
 nexttile
 stem(nb3,b3)
 title('Barker Length 3')
-xlabel('n')
+xlabel('Time')
 ylabel('b3[n]')
 axis([0 15 -3 3]);
 
@@ -90,7 +90,7 @@ ylabel('')
 title('h_{MF}[n]')
 
 %3.3 d
-figure(10)
+figure(4)
 d7=[1 -1 1 -1 -1 1 -1];
 negd7=fliplr(d7);
 yd7=conv(d7,negd7);
@@ -99,16 +99,16 @@ xlabel('Time')
 
 
 %3.3 e
-figure(11)
+figure(5)
 josh=13;
 testr=[zeros(1,josh) b13];
 negtestr=fliplr(testr);
 y33=conv(testr,negtestr)
 stem(y33)
-figure(12)
+figure(6)
 plot(noisyr4)
 title('noisyr4')
-figure(13)
+figure(7)
 nois=conv(noisyr4,negnb13);
 plot(nois)
 title('nois')
