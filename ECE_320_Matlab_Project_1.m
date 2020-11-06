@@ -89,28 +89,50 @@ xlabel('Time')
 ylabel('')
 title('h_{MF}[n]')
 
+
 %3.3 d
+
 figure(4)
-d7=[1 -1 1 -1 -1 1 -1];
+d7=[1 -1 1 -1 -1 1 -1]
+nexttile
+stem(d7)
+xlabel('Time')
+title('s[n]')
+
 negd7=fliplr(d7);
-yd7=conv(d7,negd7);
+yd7=conv(d7,negd7)
+nexttile
 stem(yd7)
 xlabel('Time')
+title('h_{MF}[n]')
 
 
 %3.3 e
 figure(5)
-josh=13;
-testr=[zeros(1,josh) b13];
-negtestr=fliplr(testr);
+josh=13
+testr=[zeros(1,13-josh) b13 zeros(1,13-josh)];
+nexttile
+stem(testr)
+xlabel('Time')
+title('b13[n-k]')
+
+negtestr=fliplr(testr)
 y33=conv(testr,negtestr)
+nexttile
 stem(y33)
+xlabel('Time')
+title('h_{MF}[n]')
+
 figure(6)
+nexttile
 plot(noisyr4)
+xlabel('Time')
 title('noisyr4')
-figure(7)
-nois=conv(noisyr4,negnb13);
+
+nois=conv(noisyr4,negtestr);
+nexttile
 plot(nois)
-title('nois')
+xlabel('Time')
+title('h_{MF}[n]')
 
 
