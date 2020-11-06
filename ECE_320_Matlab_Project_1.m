@@ -110,7 +110,7 @@ title('h_{MF}[n]')
 %3.3 e
 figure(5)
 josh=13
-testr=[zeros(1,13-josh) b13 zeros(1,13-josh)];
+testr=[zeros(1,josh) b13]
 nexttile
 stem(testr)
 xlabel('Time')
